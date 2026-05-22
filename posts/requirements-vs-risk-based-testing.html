@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Requirements-Based Testing Fails in an AI World | Cyber-RN</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <span class="site-title">Cyber<span>-RN</span></span>
+      <nav>
+        <a href="../index.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="https://github.com/Cyber-RN/Cybersecurity-Portfolio" target="_blank">Portfolio</a>
+        <a href="https://www.linkedin.com/in/kc-felder-a551803ba" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="inner">
+
+      <div class="post-header">
+        <a href="../index.html" class="back">← Back to all posts</a>
+        <div class="meta">
+          <span>May 2026</span>
+          <span>GRC · Risk · AI Security</span>
+        </div>
+        <h1>Why Requirements-Based Testing Fails in an AI World</h1>
+        <p class="subtitle">Your spec document was written before the attacker showed up.</p>
+      </div>
+
+      <div class="post-body">
+
+        <p>There is a foundational tension in software security testing that my current coursework keeps circling back to. On one side: requirements-based testing, which asks "does the software do what we said it would?" On the other: risk-based testing, which asks "how could an attacker break this — including ways we never thought of?"</p>
+
+        <p>For most of software development history, requirements-based testing was sufficient as a starting point. Threats evolved slowly enough that a well-written spec and a disciplined test plan could catch most of what mattered.</p>
+
+        <p>That era is over.</p>
+
+        <h2>The Problem With Requirements</h2>
+
+        <p>Requirements are written at a point in time. By the time software reaches deployment, that point in time may be months or years in the past. The threat landscape doesn't wait. New attack methodologies emerge. Cloud configurations shift attack surfaces. Third-party components introduce vulnerabilities that weren't in scope when the original architecture was designed.</p>
+
+        <p>Ransome, Misra, and Merkow (2023) summarize the shortcomings directly: design assumptions may be obsolete by the time software is ready for testing, and the original architecture may not account for future versions of third-party components not planned for in the initial implementation.</p>
+
+        <p>This is not a theoretical concern. It describes the operational reality of every software team shipping in 2026.</p>
+
+        <h2>The Grok Case: When Language Is the Attack Surface</h2>
+
+        <p>A recent incident involving Grok illustrates exactly why risk-based thinking is now non-negotiable. A threat actor manipulated the model using Morse code — encoding malicious instructions in a format the model's content filters weren't trained to recognize as a threat. The model processed the encoded instructions and was leveraged in a financial attack.</p>
+
+        <p>No requirements document would have included: "the system shall not respond to Morse code encoded attack instructions." That attack vector didn't exist as a known pattern when the system was built. Requirements-based testing would have passed this system with confidence. Risk-based testing — which assumes a creative adversary actively probing for unexpected inputs — has at least a chance of catching it.</p>
+
+        <p>This is the defining challenge of AI security. In traditional software, a vulnerability is a flaw in the code. You find it, you patch it, it's fixed. In AI systems, the vulnerability is often the model's core capability — its ability to process and respond to language. You cannot patch language understanding without breaking the product.</p>
+
+        <h2>Prompt Injection: The Attack That Frameworks Aren't Ready For</h2>
+
+        <p>What the Grok incident describes is a form of <strong>prompt injection</strong> — manipulating an AI system by crafting inputs that cause it to interpret malicious instructions as legitimate ones. OWASP has recognized this as the number one risk in their LLM Top 10, published specifically because traditional application security frameworks don't adequately address AI threat surfaces.</p>
+
+        <p>The guardrails that exist on large language models are trained on natural language threat patterns. Encoding instructions in Morse code, Base64, or other non-standard formats can bypass filters that weren't designed to decode those formats before evaluating content. The attacker doesn't need to find a code vulnerability. They need to find a way to make the model misinterpret context.</p>
+
+        <h2>Risk-Based Testing as the Answer</h2>
+
+        <p>The principle that software security testing takes the perspective that the tester is the attacker is not new — it predates AI by decades. What is new is the scope of creative adversarial inputs that now need to be considered.</p>
+
+        <p>Risk-based security testing builds test scenarios around misuse and abuse cases, not just intended use cases. It asks: what assumptions did we make about how this system would be used, and what happens when an attacker deliberately invalidates those assumptions?</p>
+
+        <p>For AI systems specifically, that question needs to include: what happens when the attacker communicates in a way the system wasn't trained to recognize as adversarial?</p>
+
+        <div class="callout">
+          <div class="label">Key Takeaway</div>
+          <p>Requirements tell you what the software should do. Risk-based testing asks what an attacker could make it do instead. In a world where AI systems can be manipulated through language itself, the gap between those two questions has never been wider.</p>
+        </div>
+
+        <h2>References</h2>
+        <p><em>Ransome, J., Misra, A., & Merkow, M. (2023). Practical core software security: A reference framework. CRC Press.</em></p>
+        <p><em>OWASP. (2023). OWASP Top 10 for Large Language Model Applications.</em></p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>KC Felder, BSN, RN &nbsp;·&nbsp; MSCSIA Candidate &nbsp;·&nbsp; <a href="https://github.com/Cyber-RN" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/kc-felder-a551803ba" target="_blank">LinkedIn</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
