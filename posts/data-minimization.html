@@ -30,56 +30,56 @@
           <span>Privacy · Data Governance · GRC</span>
         </div>
         <h1>The Question We Forget to Ask: Do We Even Need This Data?</h1>
-        <p class="subtitle">Data minimization isn't just a compliance checkbox — it's the most underrated security control in the stack.</p>
+        <p class="subtitle">Data minimization isn't just a compliance checkbox. It's the most underrated security control in the stack.</p>
       </div>
 
       <div class="post-body">
 
-        <p>Every week I see people posting about services that will scrub your digital footprint for a monthly fee — finding every subscription, data broker, and forgotten account that has your name, address, phone number, or email attached to it and submitting removal requests on your behalf. The market for this service exists entirely because of one failure: organizations collected data they didn't need and kept it longer than they should have.</p>
+        <p>Every week I see people posting about services that will scrub your digital footprint for a monthly fee. They find every subscription, data broker, and forgotten account tied to your name, address, phone number, or email and submit removal requests on your behalf. That market exists because of one consistent failure: organizations collected data they didn't need and held onto it far longer than they should have.</p>
 
-        <p>The question nobody asked at the beginning was the simplest one: <strong>do we actually need this?</strong></p>
+        <p>Nobody asked the simplest question at the start: <strong>do we actually need this?</strong></p>
 
         <h2>What Data Minimization Actually Means</h2>
 
-        <p>Data minimization is a privacy principle with a straightforward definition — only collect what you need, for the purpose you stated, and keep it only as long as that purpose requires. It is codified in GDPR Article 5(1)(c), embedded in the HIPAA Minimum Necessary Standard, and echoed in nearly every major privacy framework in existence.</p>
+        <p>Data minimization has a simple definition: only collect what you need, for the purpose you stated, and keep it only as long as that purpose requires. It's written into GDPR Article 5(1)(c), built into the HIPAA Minimum Necessary Standard, and referenced in nearly every major privacy framework out there.</p>
 
-        <p>The principle sounds obvious. The practice is rare.</p>
+        <p>The principle sounds obvious. In practice, it gets ignored constantly.</p>
 
-        <p>Organizations collect data opportunistically — because they can, because storage is cheap, because it might be useful someday. The security implications of that habit are enormous. Every data point you hold is a liability. If you don't have it, it cannot be breached, subpoenaed, sold, or misused.</p>
+        <p>Organizations collect data opportunistically. Because they can. Because storage is cheap. Because it might be useful someday. Every data point you hold is a liability. If you don't have it, it can't be breached, subpoenaed, sold, or misused.</p>
 
         <h2>The Microsoft SDL Privacy Classification</h2>
 
         <p>Microsoft's Security Development Lifecycle rates data privacy risk across three categories:</p>
 
         <ul>
-          <li><strong>P1 — High privacy risk:</strong> Data that directly identifies a person. Social Security numbers, medical records, biometric data, financial account details. A breach of P1 data is a reportable incident in most jurisdictions.</li>
-          <li><strong>P2 — Medium privacy risk:</strong> Data that identifies a person when combined with other data points. A name is harmless. A name plus ZIP code plus employer is enough to social engineer a help desk. The combination is what creates risk.</li>
-          <li><strong>P3 — Low privacy risk:</strong> Aggregated or anonymized data with minimal direct privacy impact.</li>
+          <li><strong>P1 (High risk):</strong> Data that directly identifies a person. Social Security numbers, medical records, biometric data, financial account details. A P1 breach is a reportable incident in most jurisdictions.</li>
+          <li><strong>P2 (Medium risk):</strong> Data that identifies a person when combined with other data points. A name alone is harmless. A name plus ZIP code plus employer is enough to social engineer a help desk. The combination is where the risk lives.</li>
+          <li><strong>P3 (Low risk):</strong> Aggregated or anonymized data with minimal direct privacy impact.</li>
         </ul>
 
-        <p>P2 is the category that catches organizations off guard. Individually innocuous data points — IP addresses, browsing patterns, location check-ins — combine into detailed profiles. This is how identity theft happens at scale: not from one massive breach, but from assembling pieces from multiple smaller leaks.</p>
+        <p>P2 is the one that catches organizations off guard. Individually harmless data points like IP addresses, browsing patterns, and location check-ins combine into detailed profiles. That's how identity theft happens at scale: not from one massive breach, but from pulling pieces together from multiple smaller ones.</p>
 
         <h2>The HIPAA Parallel</h2>
 
-        <p>In clinical practice, the Minimum Necessary Standard is enforced culture. You access the records you need for the task at hand. A radiology technician reading a chest X-ray does not need the patient's psychiatric history. A billing specialist processing a claim does not need surgical notes. Access beyond what the role requires is a HIPAA violation.</p>
+        <p>In clinical practice, the Minimum Necessary Standard is enforced culture. You access the records you need for the task in front of you. A radiology tech reading a chest X-ray doesn't need a patient's psychiatric history. A billing specialist processing a claim doesn't need surgical notes. Accessing anything beyond what your role requires is a HIPAA violation.</p>
 
-        <p>This is least privilege applied to data. The same principle that limits system access in security limits data access in privacy. The philosophy is identical: every unit of unnecessary access is an unnecessary risk.</p>
+        <p>That's least privilege applied to data. The same principle that limits system access in security limits data access in privacy. Every unit of unnecessary access is an unnecessary risk.</p>
 
         <h2>The Three Questions Every Organization Should Answer</h2>
 
-        <p>Before collecting any data element, privacy-mature organizations ask:</p>
+        <p>Before collecting any data element, organizations should be asking:</p>
 
         <ol>
           <li><strong>Do we need this at all?</strong> If the answer is no, don't collect it.</li>
-          <li><strong>How long do we actually need to keep it?</strong> Define a retention period and enforce it.</li>
+          <li><strong>How long do we actually need to keep it?</strong> Set a retention period and enforce it.</li>
           <li><strong>Who actually needs access to it?</strong> Limit access to the minimum required for the stated purpose.</li>
         </ol>
 
-        <p>These questions seem basic. They are not asked often enough. The data broker industry, the identity theft epidemic, and the paid digital footprint scrubbing services all exist because they weren't.</p>
+        <p>These questions aren't complicated. They just don't get asked often enough. The data broker industry, the identity theft epidemic, and the paid footprint-scrubbing services all exist because of that gap.</p>
 
         <div class="callout">
           <div class="label">Key Takeaway</div>
-          <p>The best data breach mitigation strategy is not having the data in the first place. Data minimization is not a compliance checkbox — it is a security control. The data you don't collect cannot be stolen.</p>
+          <p>The best data breach mitigation is not having the data in the first place. Data minimization is not a compliance checkbox. It's a security control. The data you don't collect cannot be stolen.</p>
         </div>
 
       </div>
