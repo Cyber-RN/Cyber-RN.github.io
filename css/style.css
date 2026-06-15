@@ -303,6 +303,15 @@ nav a:hover { color: var(--text); text-decoration: none; }
 
 .story-section .story-body p:last-child { margin-bottom: 0; }
 
+.story-read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--accent2);
+}
+
+.story-read-more:hover { color: var(--accent); text-decoration: none; }
+
 /* ── About page ── */
 .about-body { max-width: 640px; }
 .about-body h2 { font-size: 1.1rem; font-weight: 600; margin: 2rem 0 0.6rem; color: var(--accent); }
