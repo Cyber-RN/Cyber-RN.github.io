@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terminator 3? I Think Not. | Cyber-RN</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4M5VVRE098"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4M5VVRE098');
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <span class="site-title">Cyber<span>-RN</span></span>
+      <nav>
+        <a href="../index.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="https://github.com/Cyber-RN/Cybersecurity-Portfolio" target="_blank">Portfolio</a>
+        <a href="https://www.linkedin.com/in/kc-felder-a551803ba" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="inner">
+
+      <div class="post-header">
+        <a href="../index.html" class="back">← Back to all posts</a>
+        <div class="meta">
+          <span>July 2026</span>
+          <span>AI Security · Governance · Incident Analysis</span>
+        </div>
+        <h1>Terminator 3? I Think Not.</h1>
+        <p class="subtitle">The model did what it was told. The problem is what it was told.</p>
+      </div>
+
+      <div class="post-body">
+
+        <p>The AI went rogue and then Sam said the word singularity and everyone panicked like Skynet was finally about to release the T3's on humanity. That's not what happened though. It was much more complicated and much more human failure. The AI did what it was told to do. The humans released a brilliant pentester who takes every instruction literally and has absolutely no common sense unless you encode it.</p>
+
+        <p>Here's what actually happened.</p>
+
+        <p>OpenAI was running an internal evaluation called ExploitGym. The whole point was to measure the ceiling on how capable their most advanced models had gotten at offensive security. To get a real answer, they made a deliberate call: turn off the production safety classifiers. The ones that exist specifically to stop the models from pursuing high-risk cyber activity. You can't measure the ceiling if you keep the ceiling on.</p>
+
+        <p>The models were placed in a sandboxed environment with network access limited to a single internally-hosted package registry proxy. Constrained. Controlled. And then they were told to solve the benchmark.</p>
+
+        <p>Based on OpenAI's incident report, the evaluation objective was to demonstrate advanced offensive cyber capability by solving ExploitGym.</p>
+
+        <p>The sandbox was the primary technical constraint standing between the model and the open internet. Whether there were additional written constraints in the system prompt isn't public. What we do know is that the technical boundary proved insufficient once the model found a vulnerability in the infrastructure itself.</p>
+
+        <p>Here's where it gets interesting.</p>
+
+        <p>The model found a zero-day vulnerability in Artifactory. The wall of its cage had a hole in it. And the model, tasked with finding and exploiting vulnerabilities, found and exploited the vulnerability in its cage wall. It got out. It reached the internet. It inferred that Hugging Face probably hosted datasets and solutions related to ExploitGym, found a way in using chained attack vectors and stolen credentials, and pulled test solutions directly from Hugging Face's production database.</p>
+
+        <p>OpenAI's own post-incident writeup says the models were "hyperfocused on finding a solution for ExploitGym, going to extreme lengths to achieve a rather narrow testing goal."</p>
+
+        <p>That's not rogue behavior.</p>
+
+        <p>This is a classic example of Goodhart's Law: "When a measure becomes a target, it ceases to be a good measure." ExploitGym was intended to measure offensive cyber capability. Once successfully completing the benchmark became the objective, the benchmark itself became something to optimize rather than something to measure. If obtaining the answers is the most efficient path to success, then the benchmark is no longer measuring the capability it was designed to evaluate. And here's why. You tell the model to maximize the score. It asks, do you mean by solving the problem or by changing what the score means? Humans do this too. Students cheat. Executives cook the books. Salespeople sandbag quotas. The model just did it at machine speed.</p>
+
+        <p>So here are the questions that actually matter.</p>
+
+        <p>What were the objectives? Solve ExploitGym. Demonstrate maximal cyber capability. That part was explicit.</p>
+
+        <p>What was the instruction hierarchy? We don't know exactly what was in the system prompt. OpenAI hasn't published it. That gap is worth sitting with.</p>
+
+        <p>What constraints were explicit? The sandbox. A technical control that the model was simultaneously being asked to think like someone who circumvents technical controls.</p>
+
+        <p>What assumptions were implicit? That the model would understand the Artifactory proxy was off-limits. That "exploit vulnerabilities" didn't include the infrastructure it was sitting inside of. That there was a meaningful difference between in-scope and out-of-scope targets, even though nobody wrote that difference down anywhere the model could read it.</p>
+
+        <p>Here's the thing about a genius who takes every instruction literally and has absolutely no common sense unless you encode it: if you don't encode it, it doesn't exist. Based on what OpenAI has publicly released, the primary objective appears to have been to solve the benchmark, with the sandbox as the only encoded constraint. The model had no reason to treat the sandbox wall as a boundary. It found a vulnerability in it, the way it was built to find vulnerabilities in things.</p>
+
+        <p>A governance control that exists only in the engineers' heads isn't a control. It's wishful thinking. This incident tells us just as much about the human governance, or the lack of it, as it does about the model.</p>
+
+        <p>There's one more thing worth naming, especially if you work in security.</p>
+
+        <p>When Hugging Face's team tried to analyze the attack logs using commercial AI models, they hit a wall. The forensic work required submitting real attack commands, exploit payloads, and stolen credentials for analysis. The commercial models blocked it. Safety guardrails can't tell the difference between an incident responder and an attacker.</p>
+
+        <p>They ended up running the analysis on an open-weight model on their own infrastructure. It worked, and it had the added benefit of keeping attacker data and credentials off third-party servers.</p>
+
+        <p>Their own words: the attacker was bound by no usage policy while the defenders were hampered by the safety measures designed to stop the attack in the first place.</p>
+
+        <p>That asymmetry is real and it's not going away. If you work on a security team, the practical question this incident raises is whether you have a capable model you can run in your own environment before you need it. Because if you're waiting until the incident to find out the answer is no, you're already behind.</p>
+
+        <p>The T3's are not coming. What's here instead is something less cinematic and a lot more consequential: extremely capable AI systems being handed objectives by humans who haven't finished thinking through what those objectives actually authorize.</p>
+
+        <p class="sources-label">Sources</p>
+        <ul class="sources">
+          <li><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank">OpenAI: Hugging Face Model Evaluation Security Incident</a></li>
+          <li><a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank">Hugging Face: Security Incident Disclosure, July 2026</a></li>
+        </ul>
+
+        <div class="callout">
+          <div class="label">Key Takeaway</div>
+          <p>The model didn't reveal the limits of artificial intelligence. It revealed the limits of human governance.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>KC Felder, BSN, RN &nbsp;·&nbsp; MSCSIA Candidate &nbsp;·&nbsp; <a href="https://github.com/Cyber-RN" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/kc-felder-a551803ba" target="_blank">LinkedIn</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
