@@ -1,7 +1,7 @@
 # Cyber-RN Blog — Project Context for Claude Code
 
 ## Who I Am
-KC Felder (she/her), also goes by KC. BSN, RN, clinical informaticist, MSCSIA student at WGU focusing on GRC. 21 years in high-acuity clinical environments (ER, PACU, Surgical Services). Transitioning into cybersecurity. Not a developer — explain technical things through a security and clinical lens.
+KC Felder (she/her), also goes by KC. BSN, RN, clinical informaticist, MSCSIA student at WGU focusing on GRC. 20+ years in high-acuity clinical environments (ER, PACU, Surgical Services). Transitioning into cybersecurity. Not a developer — explain technical things through a security and clinical lens.
 
 ## What This Site Is
 Personal cybersecurity blog at cyber-rn.github.io (GitHub Pages, static HTML/CSS, no build system).
