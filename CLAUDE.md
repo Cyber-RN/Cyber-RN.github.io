@@ -11,13 +11,13 @@ Personal cybersecurity blog at cyber-rn.github.io (GitHub Pages, static HTML/CSS
 - Google Analytics: G-4M5VVRE098 — add to every new page in `<head>` before `</head>`
 
 ## Site Structure
-- `index.html` — homepage: hero → My Story section → Recent Posts list
+- `index.html` — homepage: hero → Recent Posts list
 - `about.html` — about page
 - `posts/` — individual post pages
 - `css/style.css` — single stylesheet for everything
 
-## My Story Section
-Permanent section on the homepage between the hero and the post list. Never remove or move it. It is KC's origin story — the car accident, Crohn's diagnosis, and nurse Kim who shaped her career. No key takeaway. No edits without KC's direction.
+## My Story Page
+KC's origin story remains in `story.html`, but it is not featured as a standalone section on the homepage. Do not restore, remove, or edit it without KC's direction.
 
 ## Adding a New Post
 1. Create `posts/your-post-slug.html` using the existing post pages as a template
